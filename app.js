@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")))
 
 // cookie parser
-app.use(cookieParser)
+app.use(cookieParser())
 
 // routing setup
 

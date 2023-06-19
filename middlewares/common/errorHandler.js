@@ -7,9 +7,11 @@ function notfoundHandler(req, res, next){
 
 // default handler
 function errorHandler(err, req, res, next){
-    res.locals.error = process.env.NODE_ENV === "development"? err: {message: err.message};
-    res.sendStatus(err.status || 500);
-    res.render("error");
+    // res.locals.error = process.env.NODE_ENV === "development"? err: {message: err.message};
+    // res.sendStatus(err.status || 500);
+    res.render("error", {
+        title: "Error page",
+      });
 }   
 
 module.exports = { 
