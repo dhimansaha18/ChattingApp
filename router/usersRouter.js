@@ -1,6 +1,6 @@
 const express = require("express");
 
-const { getUsers } = require("../controller/usersController");
+const { getUsers, addUser } = require("../controller/usersController");
 const decorateHtmlResponse = require("../middlewares/common/decorateHtmlResponse");
 const avatarUpload = require("../middlewares/users/avatarUpload");
 const {
@@ -16,6 +16,8 @@ router.post(
     "/",
     avatarUpload,
     addUserValidators,
-    addUserValidationHandler);
+    addUserValidationHandler, 
+    addUser
+    );
 
 module.exports = router;
