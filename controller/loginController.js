@@ -46,6 +46,8 @@ async function login(req, res, next) {
           signed: true,
         });
 
+
+
         // set logged in user local identifier
         res.locals.loggedInUser = userObject;
 

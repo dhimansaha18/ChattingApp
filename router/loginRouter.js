@@ -20,9 +20,10 @@ router.get("/", decorateHtmlResponse(page_title), getLogin);
 router.post(
   "/",
   decorateHtmlResponse(page_title),
+  login,
   doLoginValidators,
   doLoginValidationHandler,
-  login
+  
 );
 
 // logout
